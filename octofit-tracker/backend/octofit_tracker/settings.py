@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-_grz%9dh!p9yl=f)4zzqrs^s+wv!d78@q2d_*z7$*r94^jny%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'probable-invention-p7jr7p6jqrxf6p6r-8000.app.github.dev', 'localhost']
 
 
 # Application definition
@@ -129,3 +129,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Add a setting for the codespace name
+CODESPACE_NAME = "probable-invention-p7jr7p6jqrxf6p6r"

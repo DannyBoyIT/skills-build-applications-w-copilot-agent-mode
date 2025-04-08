@@ -1,10 +1,18 @@
 from rest_framework import viewsets
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
+from django.conf import settings
+
+# Update the base URL to the specific codespace name
+BASE_URL = "https://probable-invention-p7jr7p6jqrxf6p6r-8000.app.github.dev"
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+    def get_queryset(self):
+        # Example of modifying the queryset to include the base URL
+        return super().get_queryset()
 
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
